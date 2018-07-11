@@ -25,7 +25,7 @@
 					<a href="#" class="cart-mini"><i class="iconfont">&#xe634;</i>购物车<span class="cart-mini">(0)</span></a>
 				</div>
 				<div class="topbar-info">
-					<a href="#" class="link">登录</a><span class="sep">|</span>
+					<a href="http://127.0.0.1:8020/www/loveyou/Tide-xiaoMi/MIUI-Deng.html" class="link">登录</a><span class="sep">|</span>
 					<a href="#" class="link">注册</a><span class="sep">|</span>
 					<span class="message"><a href="#">消息通知</a></span>
 				</div>
@@ -36,15 +36,55 @@
 			<div id="cont">
 				<a href="#" class="header-logo"><img src="images/MIUI_03.jpg"/></a>
 				<div class="header-nav-content">
-					<ul>
-						<li><a href="#">小米手机</a></li>
-						<li><a href="#">红米</a></li>
-						<li><a href="#">电视</a></li>
-						<li><a href="#">笔记本</a></li>
-						<li><a href="#">盒子</a></li>
-						<li><a href="#">新品</a></li>
-						<li><a href="#">路由器</a></li>
-						<li><a href="#">智能硬件</a></li>
+					<ul id="header-nav_menu">
+						<li class="menu">
+							<a href="#">小米手机</a>
+							<div class="header-nav-box">
+								
+							</div>
+						</li>
+						<li class="menu">
+							<a href="#">红米</a>
+							<div class="header-nav-box">
+								
+							</div>
+						</li>
+						<li class="menu">
+							<a href="#">电视</a>
+							<div class="header-nav-box">
+								
+							</div>
+						</li>
+						<li class="menu">
+							<a href="#">笔记本</a>
+							<div class="header-nav-box">
+								
+							</div>
+						</li>
+						<li class="menu">
+							<a href="#">盒子</a>
+							<div class="header-nav-box">
+								
+							</div>
+						</li>
+						<li class="menu">
+							<a href="#">新品</a>
+							<div class="header-nav-box">
+								
+							</div>
+						</li>
+						<li class="menu">
+							<a href="#">路由器</a>
+							<div class="header-nav-box">
+								
+							</div>
+						</li>
+						<li class="menu">
+							<a href="#">智能硬件</a>
+							<div class="header-nav-box">
+								
+							</div>
+						</li>
 						<li><a href="#">服务</a></li>
 						<li><a href="#">社区</a></li>
 					</ul>
@@ -77,9 +117,16 @@
 			        </ol>
 				</div>
 				<div class="hero-menu">
-					<ul>
-						<li><a href="#">手机&nbsp;电话卡</a></li>
-						<li><a href="#">手机&nbsp;电话卡</a></li>
+					<ul id="hero-menu-ul">
+						<li>
+							<a href="#">手机&nbsp;电话卡</a>
+							<div class="hero-ul-box">
+
+							</div>
+						</li>
+						<li>
+							<a href="#">手机&nbsp;电话卡</a>
+						</li>
 						<li><a href="#">手机&nbsp;电话卡</a></li>
 						<li><a href="#">手机&nbsp;电话卡</a></li>
 						<li><a href="#">手机&nbsp;电话卡</a></li>
@@ -1340,6 +1387,7 @@
 	
 		<script type="text/javascript" src="jquery.js"></script>
 		<script >
+		/***************轮播图***********************/
 			var fare =(function() {
 				var $box = $('#box');
 				var $uuBox = $('#uu');
@@ -1376,6 +1424,42 @@
 				}
 			})()
 			fare.init()
+			/*******************导航二级菜单*****************************/
+			var menu = (function() {
+				var $libox = $('#header-nav_menu');
+				return{
+					init(){
+						this.events();
+					},
+					events(){
+						var _this = this;
+						$('li.menu').on('mouseover',function() {
+							$libox.children('li').children('div').stop().slideDown();
+						}).on('mouseleave',function() {
+							$libox.children('li').children('div').stop().slideUp()
+						})
+					}
+				}
+			})()
+			menu.init()
+			/********************轮播图导航二级菜单******************************/
+			var menu_vertical = (function() {
+				var $ulbox = $('#hero-menu-ul')
+				return{
+					init(){
+						this.events();
+					},
+					events(){
+						var _this = this;
+						$('li').on('mousemove',function() {
+							$ulbox.children('li').children('div').stop().css('display','block')
+						}).on('mouseleave',function() {
+							$ulbox.children('li').children('div').stop().css('display','none')
+						})
+					}
+				}
+			})()
+			menu_vertical.init()
 		</script>
 	</body>
 </html>

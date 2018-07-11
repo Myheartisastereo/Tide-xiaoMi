@@ -43,18 +43,22 @@ body{
 }
 .popover img{
 	margin-left: -640px;	
+	z-index: 0;
 }
 .from{
 	width: 410px;
 	height: 524px;
 	background: #fff;
 	position: absolute;
+	left: 800px;
+	top: 100px;
+	z-index: 1;
 }
 .from a{
 	display: block;
 	width: 410px;
 	height: 82px;
-	padding: 27px 0 0 10px;
+	padding: 27px 0 0 30px;
     font-size: 24px;
     color: #e0e0e0;
 }
@@ -73,7 +77,7 @@ body{
 .from-box{
 	width: 338px;
 	height: 226px;
-	margin-left: 20px;
+	margin-left: 40px;
 }
 .text-box{
 	height: 22px;

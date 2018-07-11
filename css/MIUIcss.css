@@ -29,6 +29,9 @@ a {
     text-decoration: none;
     margin:0 6px;
 }
+.header a:hover{
+	color: #fff;
+}
 .topbar-nav{
 	line-height: 40px;
 	float: left;
@@ -45,12 +48,22 @@ a {
 	text-align: center;
 	background: #424242;
 }
+.topbar-cart a{
+	display: block;
+	width: 120px;
+	height: 40px;
+	margin: 0;
+}
 .topbar-cart .iconfont{
 	position: relative;
 	top: 2px;
 	margin-right: 5px;
 }
-/*************菜单******************/
+.topbar-cart a:hover{
+	color: #FF6700;
+	background: #fff;
+}
+/*************导航******************/
 .header-nav{
 	height: 100px;
 }
@@ -66,10 +79,15 @@ a {
 	float: left;
 	font-size: 16px;
 	padding:0 5px;
+	position: relative;
 }
 .header-nav-content li a{
+	display: block;
 	color: #000;
 	line-height: 100px;
+}
+.header-nav-content li a:hover{
+	color: #FF6700;
 }
 form{
 	float: right;
@@ -90,6 +108,16 @@ form{
 	height: 50px;
 	background: #fff;
 	border: 1px solid #CCCCCC;
+}
+/**************导航栏二级菜单**************/
+.header-nav-box{
+	position: absolute;
+	left: -260px;
+	width: 1263px;
+	height:200px;
+	background: red;
+	z-index: 2;
+	display: none;
 }
 /*************轮播图和右菜单*******************/
 ul,ol{ list-style: none;}
@@ -140,6 +168,7 @@ ul,ol{ list-style: none;}
     background-color: pink;
     color: #fff;
 }
+/***********左边菜单******************/
 .hero-menu{
 	position: absolute;
 	top: 0;
@@ -154,10 +183,24 @@ ul,ol{ list-style: none;}
 	width: 234px;
 	height: 42px;
 }
+.hero-menu li:hover{
+	background: #FF6700;
+}
 .hero-menu a{
 	line-height: 42px;
 	padding-left: 30px;
 	color: #fff;
+}
+/***********左边二级菜单******************/
+.hero-ul-box{
+	z-index: 1;
+	position: absolute;
+	left: 234px;
+	top: 0;
+	width: 992px;
+	height: 460px;
+	background: #fff;
+	display: none;
 }
 /**************广告位*******************/
 .row{
